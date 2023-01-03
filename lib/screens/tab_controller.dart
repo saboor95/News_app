@@ -40,7 +40,7 @@ class _TabControllerSceenState extends State<TabControllerScreen> {
             )),
         FutureBuilder<NewsDataModel>(
             future:
-                ApiManager.getNewsData(widget.sources[selectedIndex].id ?? ""),
+                ApiManager.getNewsData(sourceId:widget.sources[selectedIndex].id ?? ""),
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return Center(

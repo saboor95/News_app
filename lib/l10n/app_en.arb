@@ -1,0 +1,16 @@
+{
+    "sports": "Sports",
+    "bussiness": "Bussiness",
+    "entertainment": "Entertainment",
+    "general": "general",
+    "science": "Science",
+    "health": "Health",
+    "category": "Categories",
+    "settings": "Settings",
+    "title":"Pick Your Category Of Interest",
+    "newsapp": "News App!",
+    "titleButton": "Language",
+    "buttonEnglish":"English",
+    "buttonArabic":"Arabic",
+    "newsapp2": "News App"
+}

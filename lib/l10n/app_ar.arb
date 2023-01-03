@@ -1,0 +1,16 @@
+{
+    "sports": "رياضة",
+    "bussiness": "استثمار",
+    "entertainment": "ترفيه",
+    "general": "عام",
+    "science": "علوم",
+    "health": "صحة",
+    "category": "التصنيفات",
+    "settings": "الاعدادات",
+    "title":"اختر فئة الاهتمام الخاصة بك",
+    "newsapp": "تطبيق الأخبار!",
+    "titleButton": "اللغة",
+    "buttonEnglish":"انجليزي",
+    "buttonArabic":"عربي",
+    "newsapp2": "تطبيق الأخبار"
+}
