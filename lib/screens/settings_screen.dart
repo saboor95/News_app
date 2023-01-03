@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../models/mode_dropdownbutton.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../shared/components/mode_dropdownbutton.dart';
 class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
