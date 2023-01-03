@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:news_app/models/NewsDataModel.dart';
 import 'package:news_app/models/SourcesResponse.dart';
+import '../../../models/LanguageData.dart';
 import '../../constants/constants.dart';
 
 class ApiManager{
@@ -25,10 +26,11 @@ static  Future<SourcesResponse> getSources
 }
 
 
-static Future <NewsDataModel> getNewsData({String? sourceId, String? searchKeyWord,})async{
+static Future <NewsDataModel> getNewsData({String? sourceId, String? searchKeyWord,String? Lang})async{
   Uri URL=Uri.http(BASE,'/v2/everything',{
   "apiKey": APIKEY,
   "sources":sourceId,
+    "language":Lang,
     "q":searchKeyWord,
 
   });
@@ -37,4 +39,29 @@ static Future <NewsDataModel> getNewsData({String? sourceId, String? searchKeyWo
 NewsDataModel newsDataModel=NewsDataModel.fromJson(json);
 return newsDataModel;
   }
+
+static Future<LanguageData> getLanguageData(String sourceId,String Lang) async{
+
+  Uri URL = Uri.https(
+      BASE,
+      '/v2/everything',
+      {"apiKey":APIKEY,
+        "sources":sourceId,
+        "language":Lang// to get data by id from api
+      }
+  );
+
+  Response sources = await http.get(URL);
+
+  var json = jsonDecode(sources.body);
+
+  LanguageData Language_Data = LanguageData.fromJson(json);
+
+  return Language_Data;
+
+}
+
+
+
+
 }
